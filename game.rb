@@ -1,7 +1,5 @@
 class Game 
 
-  attr_accessor :currentPlayer, :nextPlayer
-
   def initialize (user1, user2)
     @player1 = user1
     @player2 = user2
@@ -11,7 +9,7 @@ class Game
     puts "----- NEW GAME -----"
 
     loop do
-      
+
       question = Question.new
       puts "#{@player1.name}: #{question.get_question}"
       response = $stdin.gets.chomp.to_i
@@ -26,7 +24,7 @@ class Game
 
           if (!@player1.continue_playing?)
             puts "#{@player2.name} wins with a score of #{@player2.score}"
-            puts " ----- GAME OVER -----"
+            puts "----- GAME OVER -----"
             puts "Good bye!"
             break
           else 
