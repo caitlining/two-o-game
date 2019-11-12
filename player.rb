@@ -13,10 +13,10 @@ class Player
   end
 
   def continue_playing?
-    @points > 0
+    points > 0
   end
 
   def score
-    "#{@points} / 3"
+    "#{points} / 3"
   end
 end

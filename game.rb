@@ -1,8 +1,8 @@
 class Game 
 
-  def initialize (user1, user2)
-    @player1 = user1
-    @player2 = user2
+  def initialize
+    @player1 = Player.new('Player 1', 'P1')
+    @player2 = Player.new('Player 2', 'P2')
   end
 
   def run
