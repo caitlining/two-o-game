@@ -29,16 +29,16 @@ class Game
     end
   end
 
-  def turn(current_player)
+  def turn(active_player)
     question = Question.new
-    puts "#{current_player.name}: #{question.output_question}"
+    puts "#{active_player.name}: #{question.output_question}"
     player_guess = gets.chomp.to_i
 
     if (question.is_correct?(player_guess))
-      puts "#{current_player.name}: YES! You are correct.".green
+      puts "#{active_player.name}: YES! You are correct.".green
     else 
-      puts "#{current_player.name}: Seriously? No!".red
-      current_player.decrement_points_by(1)
+      puts "#{active_player.name}: Seriously? No!".red
+      active_player.decrement_points_by(1)
     end
   end
 
