@@ -11,12 +11,14 @@ class Game
 
   def run
     puts "----- NEW GAME -----".magenta
+
     while @game_continue do
 
       turn(@active_player)
+      puts "#{@player1.short_name}: #{@player1.points}/#{@starting_lives} vs #{@player2.short_name}: #{@player2.points}/#{@starting_lives}"
+
 
       if continue_game?
-        puts "#{@player1.nick_name}: #{@player1.points}/#{@starting_lives} vs #{@player2.nick_name}: #{@player2.points}/#{@starting_lives}"
         puts "----- NEW TURN -----".cyan
         switch_active_player_from(@active_player)
       else
