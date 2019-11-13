@@ -1,6 +1,8 @@
+require 'colorize'
+
 require './player'
 require './question'
-require './game'
+require './game_v2'
 
 game = Game.new.run
 
