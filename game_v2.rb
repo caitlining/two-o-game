@@ -28,7 +28,7 @@ class Game
   def turn(current_player)  
     question = Question.new
     puts "#{current_player.name}: #{question.get_question}"
-    response = $stdin.gets.chomp.to_i
+    response = gets.chomp.to_i
 
     if (question.is_correct(response))
       puts "#{current_player.name}: YES! You are correct.".green
